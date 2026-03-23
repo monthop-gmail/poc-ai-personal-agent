@@ -1,0 +1,19 @@
+services:
+  agent:
+    build: .
+    container_name: ai-personal-agent
+    stdin_open: true    # เปิด stdin สำหรับ interactive mode
+    tty: true           # เปิด terminal
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    volumes:
+      # ข้อมูลถาวร — ไม่หายเมื่อ restart
+      - ./notes:/workspace/notes
+      - ./projects:/workspace/projects
+      - ./research:/workspace/research
+      - ./scripts:/workspace/scripts
+      # ไฟล์ชั่วคราว — ไม่ mount ให้หายไปเมื่อ restart
+      # - ./downloads:/workspace/downloads
+    # ไม่ให้สิทธิ์เข้าถึง host โดยตรง
+    security_opt:
+      - no-new-privileges:true

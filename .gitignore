@@ -1,0 +1,35 @@
+# ไฟล์ลับ / credentials
+.env
+.env.*
+*.pem
+*.key
+*.secret
+credentials.json
+token.json
+
+# โฟลเดอร์ที่ไม่ควรขึ้น repo
+downloads/
+!downloads/.gitkeep
+
+# ระบบ
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Docker
+.docker/
+
+# IDE
+.vscode/
+.idea/
