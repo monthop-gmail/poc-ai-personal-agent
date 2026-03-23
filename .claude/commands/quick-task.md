@@ -1,12 +1,12 @@
-Execute a quick task: $ARGUMENTS
+ทำงานด่วน: $ARGUMENTS
 
-This is a shortcut for common quick tasks. Interpret what the user wants and execute it efficiently.
+คำสั่งลัดสำหรับงานเล็กๆ ที่ต้องการทำเร็วๆ ตีความสิ่งที่ผู้ใช้ต้องการแล้วทำให้เลย
 
-Examples of quick tasks:
-- "quick-task what's my IP" — show public and local IP
-- "quick-task weather Bangkok" — search for current weather
-- "quick-task translate ..." — translate text
-- "quick-task calc ..." — calculate something
-- "quick-task convert ..." — unit conversion
+ตัวอย่างงานด่วน:
+- "quick-task IP อะไร" — แสดง public และ local IP
+- "quick-task สภาพอากาศ กรุงเทพ" — ค้นหาสภาพอากาศปัจจุบัน
+- "quick-task แปล ..." — แปลข้อความ
+- "quick-task คำนวณ ..." — คำนวณ
+- "quick-task แปลงหน่วย ..." — แปลงหน่วย
 
-Be concise. Output the result directly without unnecessary explanation.
+ตอบกระชับ แสดงผลลัพธ์โดยตรง ไม่ต้องอธิบายเกินจำเป็น

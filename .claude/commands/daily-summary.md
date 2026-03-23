@@ -1,7 +1,7 @@
-Review and summarize today's status:
+สรุปสถานะประจำวัน:
 
-1. Check git activity across repos in /opt/docker-test/ (recent commits today)
-2. Check running Docker containers and their status
-3. Check disk usage and system resources
-4. Check if there are any cron jobs scheduled for today
-5. Summarize everything in a clean, concise format in Thai
+1. เช็ค git activity ใน repos ทั้งหมดภายใต้ /opt/docker-test/ (commit ล่าสุดของวันนี้)
+2. เช็ค Docker containers ที่รันอยู่และสถานะ
+3. เช็คพื้นที่ดิสก์และทรัพยากรระบบ
+4. เช็คว่ามี cron jobs ที่กำหนดไว้สำหรับวันนี้หรือไม่
+5. สรุปทั้งหมดในรูปแบบที่อ่านง่าย กระชับ เป็นภาษาไทย

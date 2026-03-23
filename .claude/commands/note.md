@@ -1,17 +1,17 @@
-Manage personal notes in the ~/notes/ directory.
+จัดการโน้ตส่วนตัวในโฟลเดอร์ ~/notes/
 
-If $ARGUMENTS is empty, list all existing notes.
+ถ้า $ARGUMENTS ว่างเปล่า ให้แสดงรายการโน้ตทั้งหมดที่มีอยู่
 
-Otherwise, interpret the arguments:
-- If it starts with "add" or "new" — create a new note with the given content. Use a descriptive filename based on the content. Add a timestamp header.
-- If it starts with "find" or "search" — search through existing notes for the keyword
-- If it starts with "read" — display the specified note
-- If it starts with "delete" — confirm with the user, then delete the note
+ถ้ามี arguments ให้ตีความดังนี้:
+- ขึ้นต้นด้วย "เพิ่ม", "add" หรือ "new" — สร้างโน้ตใหม่ตามเนื้อหาที่ให้มา ตั้งชื่อไฟล์ตามเนื้อหา พร้อมใส่ timestamp
+- ขึ้นต้นด้วย "หา", "find" หรือ "search" — ค้นหาในโน้ตที่มีอยู่ตาม keyword
+- ขึ้นต้นด้วย "อ่าน" หรือ "read" — แสดงโน้ตที่ระบุ
+- ขึ้นต้นด้วย "ลบ" หรือ "delete" — ยืนยันกับผู้ใช้ก่อน แล้วจึงลบ
 
-Notes format:
+รูปแบบโน้ต:
 ```
-# [Title]
-Date: YYYY-MM-DD HH:MM
+# [หัวข้อ]
+วันที่: YYYY-MM-DD HH:MM
 ---
-[Content]
+[เนื้อหา]
 ```

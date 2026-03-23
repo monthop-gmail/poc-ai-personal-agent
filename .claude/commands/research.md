@@ -1,10 +1,10 @@
-Research the topic provided by the user: $ARGUMENTS
+ค้นคว้าหัวข้อที่ผู้ใช้ระบุ: $ARGUMENTS
 
-1. Search the web for relevant, up-to-date information
-2. Gather information from multiple sources
-3. Summarize findings in a structured format:
-   - Overview / Key Points
-   - Details
-   - Sources
-4. Respond in the same language the user is using
-5. Ask if the user wants to save the research as a note
+1. ค้นหาข้อมูลจากเว็บที่เกี่ยวข้องและเป็นปัจจุบัน
+2. รวบรวมข้อมูลจากหลายแหล่ง
+3. สรุปสิ่งที่พบในรูปแบบที่มีโครงสร้าง:
+   - ภาพรวม / ประเด็นสำคัญ
+   - รายละเอียด
+   - แหล่งอ้างอิง
+4. ตอบในภาษาเดียวกับที่ผู้ใช้ใช้
+5. ถามว่าผู้ใช้ต้องการบันทึกเป็นโน้ตหรือไม่

@@ -1,7 +1,7 @@
-Check the status of all services and report:
+เช็คสถานะบริการทั้งหมดและรายงาน:
 
-1. List all running Docker containers with `docker ps` — show name, status, ports, and uptime
-2. Check system resource usage (CPU, memory, disk)
-3. Check network connectivity (ping google.com)
-4. Flag any services that are down or unhealthy
-5. Report in a concise table format in Thai
+1. แสดง Docker containers ทั้งหมดด้วย `docker ps` — แสดงชื่อ, สถานะ, พอร์ต และ uptime
+2. เช็คทรัพยากรระบบ (CPU, หน่วยความจำ, ดิสก์)
+3. เช็คการเชื่อมต่อเครือข่าย (ping google.com)
+4. แจ้งเตือนหากมีบริการที่ล่มหรือมีปัญหา
+5. รายงานในรูปแบบตาราง กระชับ เป็นภาษาไทย
