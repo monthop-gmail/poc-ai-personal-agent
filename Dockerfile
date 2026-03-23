@@ -11,16 +11,21 @@ RUN apt-get update && apt-get install -y \
 # ติดตั้ง Claude Code
 RUN npm install -g @anthropic-ai/claude-code
 
-# สร้างโครงสร้างโฟลเดอร์
-RUN mkdir -p /workspace/{notes,projects,downloads,research,scripts}
+# สร้างโครงสร้างโฟลเดอร์ และให้ user node เป็นเจ้าของ
+RUN mkdir -p /workspace/notes \
+    /workspace/projects \
+    /workspace/downloads \
+    /workspace/research \
+    /workspace/scripts \
+    && chown -R node:node /workspace
 
 WORKDIR /workspace
 
 # คัดลอกไฟล์ตั้งค่า agent
-COPY CLAUDE.md .
-COPY .claude/ .claude/
+COPY --chown=node:node CLAUDE.md .
+COPY --chown=node:node .claude/ .claude/
 
-# volume สำหรับข้อมูลถาวร
-VOLUME ["/workspace/notes", "/workspace/projects", "/workspace/research", "/workspace/scripts"]
+# รันเป็น user node (ไม่ใช่ root)
+USER node
 
 CMD ["claude"]
