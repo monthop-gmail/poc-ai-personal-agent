@@ -31,7 +31,7 @@
 3. **สรุปประจำวัน** — สรุปสถานะระบบ:
    - Docker containers ที่รันอยู่
    - พื้นที่ดิสก์
-   - Git activity ล่าสุดใน /opt/docker-test/
+   - Git activity ล่าสุดใน /workspace/
 4. **งานค้าง** — เช็คว่ามี task หรือ TODO ค้างอยู่ไหม (ดูจาก memory และไฟล์ notes)
 5. **ถามว่าวันนี้จะทำอะไร** — พร้อมแนะนำ commands ที่มี
 
