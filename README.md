@@ -8,12 +8,20 @@ PoC สำหรับสร้าง AI Personal Agent ด้วย [Claude Cod
 
 ### รันแบบ Docker (แนะนำ)
 
+ต้อง login Claude Code บน host ก่อน (ครั้งเดียว):
+```bash
+claude login
+```
+
+จากนั้นรัน agent:
 ```bash
 git clone https://github.com/monthop-gmail/poc-ai-personal-agent.git
 cd poc-ai-personal-agent
 docker compose up -d
 docker compose exec agent claude
 ```
+
+> OAuth credentials จะถูก mount จาก `~/.claude/` ของ host เข้าไปใน container อัตโนมัติ
 
 ### รันแบบ Local
 

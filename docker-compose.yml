@@ -4,9 +4,9 @@ services:
     container_name: ai-personal-agent
     stdin_open: true    # เปิด stdin สำหรับ interactive mode
     tty: true           # เปิด terminal
-    environment:
-      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
     volumes:
+      # OAuth — คัดลอก credentials จาก host user
+      - ~/.claude:/home/node/.claude
       # ข้อมูลถาวร — ไม่หายเมื่อ restart
       - ./notes:/workspace/notes
       - ./projects:/workspace/projects
