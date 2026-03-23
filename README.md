@@ -46,21 +46,27 @@ claude
 
 ```
 /workspace/
-├── .claude/commands/   — คำสั่งลัด
-├── notes/              — โน้ตส่วนตัว
-├── projects/           — โปรเจคทั้งหมด
-├── research/           — ผลการค้นคว้า
-├── downloads/          — ไฟล์ชั่วคราว
-├── scripts/            — สคริปต์ที่ใช้บ่อย
-├── CLAUDE.md           — คำสั่งหลักของ agent
-└── CHECKLIST.md        — คู่มือสร้าง agent ของตัวเอง
+├── .claude/
+│   ├── commands/          — คำสั่งลัด (Slash Commands)
+│   └── settings.json      — ตั้งค่า permissions + MCP
+├── .mcp.json              — ตั้งค่า MCP servers
+├── notes/                 — โน้ตส่วนตัว
+├── projects/              — โปรเจคทั้งหมด
+├── research/              — ผลการค้นคว้า
+├── downloads/             — ไฟล์ชั่วคราว
+├── scripts/               — สคริปต์ที่ใช้บ่อย
+├── memory.jsonl           — Knowledge Graph Memory (สร้างอัตโนมัติ)
+├── CLAUDE.md              — คำสั่งหลักของ agent
+├── CHECKLIST.md           — คู่มือสร้าง agent ของตัวเอง
+└── README.md              — ไฟล์นี้
 ```
 
 ## ฟีเจอร์หลัก
 
-- **Auto Memory** — agent จำข้อมูลสำคัญข้ามเซสชันโดยอัตโนมัติ
+- **Auto Memory** — agent จำข้อมูลสำคัญข้ามเซสชันโดยอัตโนมัติ (markdown files)
+- **Knowledge Graph Memory** — จำความสัมพันธ์ระหว่างคน/โปรเจค/เทคโนโลยี ผ่าน [MCP server-memory](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)
 - **On Session Start** — เปิดมาก็สรุปสถานะ + งานค้างให้เลย
-- **Folder Rules** — ไฟล์ไม่มัว่งเปะปะ agent รู้ว่าอะไรวางที่ไหน
+- **Folder Rules** — ไฟล์ไม่มั่วเปะปะ agent รู้ว่าอะไรวางที่ไหน
 - **Docker Ready** — รันใน container ปลอดภัย แยกจาก host
 
 ## อยากสร้าง Agent ของตัวเอง?

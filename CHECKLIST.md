@@ -29,6 +29,7 @@
 - [ ] `/check-services` — เช็คสถานะบริการ (Docker, resources, network)
 - [ ] `/research [หัวข้อ]` — ค้นคว้าข้อมูลจากเว็บ
 - [ ] `/note [add/find/read/delete]` — จัดการโน้ต
+- [ ] `/todo [add/done/list/delete]` — จัดการ TODO list
 - [ ] `/quick-task [งาน]` — งานด่วนเบ็ดเตล็ด
 - [ ] คำสั่งอื่นๆ ที่เหมาะกับการใช้งานของคุณ
 
@@ -63,7 +64,11 @@
 
 ## 7. เชื่อมบริการภายนอก (MCP Servers) — ไม่บังคับ
 
+- [ ] สร้างไฟล์ `.mcp.json` ที่ root ของโปรเจค
+- [ ] เพิ่ม `enableAllProjectMcpServers: true` ใน `.claude/settings.json`
+- [ ] เพิ่ม `mcp__<server>__*` ใน permissions allow list
 - [ ] ตั้งค่า MCP servers ตามที่ต้องการ:
+  - [ ] **server-memory** — Knowledge Graph Memory (แนะนำ) ดูตัวอย่างใน `.mcp.json`
   - [ ] Google Calendar — ดูตาราง/สร้างนัด
   - [ ] Notion / Obsidian — จัดการ notes
   - [ ] Slack — ส่ง/อ่านข้อความ

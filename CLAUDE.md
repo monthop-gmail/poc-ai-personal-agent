@@ -48,7 +48,7 @@
 - ยังไม่ได้ deploy service X
 - PR #42 รอ review
 
-วันนี้จะทำอะไรดีครับ? (/daily-summary, /check-services, /research, /note, /quick-task)
+วันนี้จะทำอะไรดีครับ? (/daily-summary, /check-services, /research, /note, /todo, /quick-task)
 ```
 
 ## การบันทึกความจำอัตโนมัติ (Auto Memory)
