@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(sudo *)",
+      "Bash(su *)"
+    ],
+    "allow": [
+      "Bash(*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "mcp__memory__*"
+    ]
+  },
+  "enableAllProjectMcpServers": true
+}
