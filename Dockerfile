@@ -17,7 +17,8 @@ RUN mkdir -p /workspace/notes \
     /workspace/downloads \
     /workspace/research \
     /workspace/scripts \
-    && chown -R node:node /workspace
+    /home/node/.claude \
+    && chown -R node:node /workspace /home/node/.claude
 
 WORKDIR /workspace
 
@@ -25,7 +26,12 @@ WORKDIR /workspace
 COPY --chown=node:node CLAUDE.md .
 COPY --chown=node:node .claude/ .claude/
 
+# Entrypoint สำหรับ setup credentials
+COPY --chown=node:node entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 # รันเป็น user node (ไม่ใช่ root)
 USER node
 
+ENTRYPOINT ["entrypoint.sh"]
 CMD ["claude"]

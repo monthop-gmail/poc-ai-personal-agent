@@ -5,8 +5,10 @@ services:
     stdin_open: true    # เปิด stdin สำหรับ interactive mode
     tty: true           # เปิด terminal
     volumes:
-      # OAuth — คัดลอก credentials จาก host user
-      - ~/.claude:/home/node/.claude
+      # OAuth — mount credentials ไว้ที่ tmp ให้ entrypoint คัดลอกไปใช้
+      - ~/.claude/.credentials.json:/tmp/host-claude-credentials/.credentials.json:ro
+      # ข้อมูล agent — แยกจาก host ไม่ปนกัน
+      - agent-data:/home/node/.claude
       # ข้อมูลถาวร — ไม่หายเมื่อ restart
       - ./notes:/workspace/notes
       - ./projects:/workspace/projects
@@ -17,3 +19,6 @@ services:
     # ไม่ให้สิทธิ์เข้าถึง host โดยตรง
     security_opt:
       - no-new-privileges:true
+
+volumes:
+  agent-data:   # ข้อมูล .claude ของ container (memory, history, settings)
