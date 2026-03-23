@@ -24,6 +24,7 @@ WORKDIR /workspace
 
 # คัดลอกไฟล์ตั้งค่า agent
 COPY --chown=node:node CLAUDE.md .
+COPY --chown=node:node .mcp.json .
 COPY --chown=node:node .claude/ .claude/
 
 # Entrypoint สำหรับ setup credentials

@@ -98,6 +98,7 @@
 │
 ├── scripts/                # 🛠️ สคริปต์ที่ใช้บ่อย (bash, python, etc.)
 │
+├── memory.jsonl             # 🧠 Knowledge Graph Memory (MCP server-memory)
 ├── CLAUDE.md               # 📋 คำสั่งหลักของ agent (ไฟล์นี้)
 └── README.md               # 📖 อธิบายโปรเจค
 ```
@@ -110,3 +111,24 @@
 - **ไฟล์ดาวน์โหลด/ชั่วคราว** → วางใน `downloads/`
 - **สคริปต์** → วางใน `scripts/`
 - ถ้าไม่แน่ใจว่าควรวางที่ไหน → **ถามผู้ใช้ก่อน**
+
+## Knowledge Graph Memory (MCP server-memory)
+
+นอกจาก Auto Memory แบบไฟล์ markdown แล้ว ยังมี **Knowledge Graph Memory** ผ่าน MCP server
+เก็บข้อมูลเป็น entities และ relations ในไฟล์ `/workspace/memory.jsonl`
+
+### เมื่อไหร่ควรใช้ Knowledge Graph:
+- **ข้อมูลที่มีความสัมพันธ์** — เช่น "ต้น → ใช้ → Terraform", "โปรเจค X → deadline → 30 เม.ย."
+- **ข้อมูลบุคคล** — ชื่อ, ตำแหน่ง, ทีม, ความเชี่ยวชาญ
+- **ข้อมูลโปรเจค** — เทคโนโลยีที่ใช้, สถานะ, คนที่เกี่ยวข้อง
+
+### วิธีใช้ (ผ่าน MCP tools):
+- `mcp__memory__create_entities` — สร้าง entity ใหม่
+- `mcp__memory__create_relations` — สร้างความสัมพันธ์ระหว่าง entities
+- `mcp__memory__search_nodes` — ค้นหาข้อมูลจาก knowledge graph
+- `mcp__memory__open_nodes` — เปิดดู entity ที่ระบุ
+
+### หลักการ:
+- ใช้ Knowledge Graph สำหรับข้อมูลที่มีความสัมพันธ์ซับซ้อน
+- ใช้ Auto Memory (markdown) สำหรับ feedback, preferences, บันทึกทั่วไป
+- ทั้งสองระบบทำงานร่วมกัน ไม่ต้องเลือกอย่างเดียว
